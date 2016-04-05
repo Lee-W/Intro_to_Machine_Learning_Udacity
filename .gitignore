@@ -1,0 +1,9 @@
+
+# Created by https://www.gitignore.io/api/ipythonnotebook
+
+### IPythonNotebook ###
+# Temporary data
+.ipynb_checkpoints/
+
+ud120-projects/
+
