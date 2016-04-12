@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import os
 import pickle
 import numpy as np
 
@@ -8,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectPercentile, f_classif
 
 
-def preprocess(words_file = "word_data.pkl", authors_file="email_authors.pkl"):
+def preprocess(words_file = "word_data.pkl", authors_file="email_authors.pkl", *, path_prefix=None):
     """ 
         this function takes a pre-made list of email texts (by default word_data.pkl)
         and the corresponding authors (by default email_authors.pkl) and performs
@@ -24,6 +25,9 @@ def preprocess(words_file = "word_data.pkl", authors_file="email_authors.pkl"):
             -- training/testing labels
 
     """
+    if path_prefix:
+        words_file = os.path.join(path_prefix, words_file)
+        authors_file = os.path.join(path_prefix, authors_file)
 
     ### the words (features) and authors (labels), already largely preprocessed
     ### this preprocessing will be repeated in the text learning mini-project
