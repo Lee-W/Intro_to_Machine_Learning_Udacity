@@ -8,6 +8,7 @@ The Python version used in the course is Python 2 while all the code in this rep
 3. Decision Tree
 4. Choose Your Own Algorithm
 5. Datasets and Questions
+6. Regression (Not Finished)
 
 # AUTHORS
 [Lee-W](https://github.com/Lee-W/)
